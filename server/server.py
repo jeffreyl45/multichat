@@ -10,5 +10,5 @@ def hello_world():
 def send_a_message():
     message = request.json['message']
     print(message)
-    return "Success \n", 200
+    return {"Success": True}, 200
     
