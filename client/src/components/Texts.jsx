@@ -1,5 +1,7 @@
+// display the texts 
 import {useState, useEffect} from 'react';
 import {getWebSocket} from 'util/WebSocket';
+import './Texts.css';
 const Texts = () => {
     const [texts, setTexts] = useState([]);
 
@@ -13,11 +15,12 @@ const Texts = () => {
 
     return (
         <div>
-            <h1>LOL</h1>
-        <ul>
+            <h1>Multichat</h1>
+            <br/>
+        <ul className="text-container">
             {
                 texts.map((text, index) => {
-                    return <li key={index}>{text}</li>;
+                    return <li key={index} className="Texts">{text}</li>;
                 })
             }
         </ul>

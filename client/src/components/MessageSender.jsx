@@ -29,7 +29,7 @@ const MessageSender = () => {
         <form onSubmit={handleSubmit}>
             <label htmlFor="message">Message:</label><br />
             <input type="text" name="message" value={message} onChange={handleChange}></input><br />
-            <input type="submit"></input>
+            <input type="submit" disabled={message.length == 0}></input>
         </form>
     )
 
