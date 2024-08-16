@@ -68,7 +68,7 @@ def get_profile():
             "https://www.googleapis.com/auth/userinfo.email",
             "openid"
         ],
-        redirect_uri="http://localhost:3000"
+        redirect_uri=secrets["redirect_url"]
     )
 
     # Exchange the authorization code for an access token
