@@ -22,3 +22,16 @@
 .pfp {
     height: 30px;
 }
+
+.ownText {
+    list-style-type: none;
+    background-color: grey;
+    padding: 30px;
+    border-radius: 40%;
+    float: right;
+    margin-right: 15%;
+    margin-bottom: 10px;
+    width: 50%;
+    word-wrap: break-word;
+    text-align: right;
+}

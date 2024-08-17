@@ -9,6 +9,10 @@ import axios from 'axios';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const [texts, setTexts] = useState([]);
+
+
+
   const login = 
     useGoogleLogin({
       onSuccess: async (codeResponse) => {
@@ -31,6 +35,15 @@ function App() {
     googleLogout();
     setLoggedIn(false);
   }
+
+  const controller = {
+    addText: message => {
+      setTexts([...texts, message]);
+    },
+    texts,
+    setTexts,
+
+  }
   
 
   return (
@@ -39,8 +52,8 @@ function App() {
           <button onClick={loginClicked}>Login</button>
         ) : (
           <>
-            <Texts />
-            <MessageSender />
+            <Texts controller={controller}/>
+            <MessageSender controller={controller}/>
             <button onClick={logoutClicked}>Signout</button>
           </>
         )}

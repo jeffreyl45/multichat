@@ -1,13 +1,14 @@
 import {useState} from 'react';
 import { getWebSocket } from 'util/WebSocket';
 
-const MessageSender = () => {
+const MessageSender = ({controller}) => {
     const [message, setMessage] = useState('');
     const handleSubmit = (event) => {
         event.preventDefault();
         const webSocket = getWebSocket();
         webSocket.emit("sendMessage", {message});
         setMessage('');
+        controller.addText({message})
 
     }
     const handleChange = (event) => {
