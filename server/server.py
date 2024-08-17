@@ -38,8 +38,6 @@ def send_message(data):
     }
     socketio.emit("new text", messageToBroadcast, include_self = False)
 
-
-
 @socketio.on("connect")
 def test_connect(auth):
     print("Client Connected")
