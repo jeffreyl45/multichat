@@ -7,8 +7,9 @@ const MessageSender = ({controller}) => {
         event.preventDefault();
         const webSocket = getWebSocket();
         webSocket.emit("sendMessage", {message});
-        setMessage('');
         controller.addText({message})
+        setMessage('');
+        
 
     }
     const handleChange = (event) => {
