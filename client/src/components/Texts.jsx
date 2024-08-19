@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { getWebSocket } from "util/WebSocket";
 import "./Texts.css";
 const Texts = ({controller}) => {
-  
   const webSocket = getWebSocket();
   webSocket.off("new text");
   webSocket.on("new text", (data) => {

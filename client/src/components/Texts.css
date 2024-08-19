@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: row;
     margin: auto;
-    margin-left: 50%
-    
+    margin-left: 50%;
+    width: fit-content;
 }
 
 .otherText {
@@ -19,12 +19,12 @@
     background-color: skyblue;
     border-radius: 40px;
     margin-bottom: 10px;
-    width: min-content;
-    word-wrap: break-word;
     text-align: left;
     position: relative;
     padding: 30px;
-    display: flex;
+    display: grid;
+    word-wrap: break-word;
+    margin-left: 50px;
 }
 
 .pfp {
@@ -39,12 +39,11 @@
     padding: 30px;
     border-radius: 40px;
     float: right;
-    margin-left: -60%;
+    margin-left: -50%;
     margin-bottom: 10px;
-    width: min-content;
-    max-width: 50%;
-    word-wrap: break-word;
     text-align: left;
     position: relative;
+    width: fit-content;
+    max-width: 250px;
+    word-wrap: break-word;
 }
-

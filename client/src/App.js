@@ -57,7 +57,7 @@ function App() {
             <div className="header-text">
               <h1>Multichat</h1>
               <br />
-              <button id="googleLoginButton" onClick={loginClicked}>
+              <button className="googleLoginButton" onClick={loginClicked}>
                 Login with Google
               </button>
             </div>
@@ -67,7 +67,7 @@ function App() {
         <>
           <Texts controller={controller} />
           <MessageSender controller={controller} />
-          <button onClick={logoutClicked}>Signout</button>
+          <button id="googleLogoutButton" onClick={logoutClicked}>Signout</button>
         </>
       )}
     </div>

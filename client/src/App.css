@@ -66,7 +66,7 @@
 }
 
 /* Optional: Additional styling for the button */
-#googleLoginButton {
+.googleLoginButton {
   margin-top: 10px; /* Space between h1 and button */
   padding: 10px 20px; /* Adjust padding as needed */
   background-color: #4285F4; /* Google Blue */
@@ -81,10 +81,32 @@
   justify-content: center;
 }
 
-#googleLoginButton:hover {
+.googleLoginButton:hover {
   background-color: #357AE8; /* Darker Google Blue */
 }
 
-#googleLoginButton:focus {
+.googleLoginButton:focus {
+  outline: none;
+}
+
+#googleLogoutButton {
+  margin-top: 10px; /* Space between h1 and button */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+#googleLogoutButton:hover {
+  background-color: #357AE8; /* Darker Google Blue */
+}
+
+#googleLogoutButton:focus {
   outline: none;
 }
