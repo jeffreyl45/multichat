@@ -8,10 +8,10 @@
 
 .Texts {
     display: flex;
-    flex-direction: row;
     margin: auto;
     margin-left: 50%;
-    
+    width: fit-content;
+    max-width: 250px;
 }
 
 .otherText {
@@ -19,21 +19,21 @@
     background-color: skyblue;
     border-radius: 40px;
     margin-bottom: 10px;
-    text-align: left;
     padding: 20px;
     display: block;
     margin-bottom: 10px;
     text-align: left;
-    width: fit-content;
-    max-width: 250px;
+    max-width: fit-content;
     word-wrap: break-word;
-    margin-left: 50px;
+    margin-left: -50%;
+    float: left;
 }
 
 .pfp {
     height: 30px;
     border-radius: 50%;
     float: left;
+    position: left;
 }
 
 .ownText {
@@ -42,10 +42,15 @@
     padding: 20px;
     border-radius: 40px;
     float: right;
-    margin-left: -50%;
+    margin-left: 50%;
     margin-bottom: 10px;
     text-align: left;
     width: fit-content;
     max-width: 250px;
     word-wrap: break-word;
+}
+
+.otherUserText {
+    margin-left: -50%;
+    display: grid;
 }

@@ -19,7 +19,7 @@ const Texts = ({controller}) => {
         {controller.texts.map((data, index) => {
           return (data.pfp != null ? 
             <li key={index} className="Texts">
-              <div>
+              <div className="otherUserText">
                 <img
                   className="pfp"
                   src={data.pfp}
