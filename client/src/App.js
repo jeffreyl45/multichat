@@ -3,61 +3,74 @@ import { useState } from "react";
 import "./App.css";
 import MessageSender from "components/MessageSender";
 import Texts from "components/Texts";
-import { GoogleOAuthProvider, googleLogout, useGoogleLogin } from "@react-oauth/google";
-import axios from 'axios';
+import {
+  GoogleOAuthProvider,
+  googleLogout,
+  useGoogleLogin,
+} from "@react-oauth/google";
+import axios from "axios";
+import appLogo from "./images/appLogo.png";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const [texts, setTexts] = useState([]);
 
-
-
-  const login = 
-    useGoogleLogin({
-      onSuccess: async (codeResponse) => {
-        try {
-          const data = await axios.get(`/profile-oauth?code=${codeResponse.code}`)
-          setLoggedIn(true);
-        } catch (err) {
-          console.error("Error calling profile oauth", err);
-        }
-      },
-      onError: (error) => console.error('Login Failed:', error),
-      flow: "auth-code"
-    });
+  const login = useGoogleLogin({
+    onSuccess: async (codeResponse) => {
+      try {
+        const data = await axios.get(
+          `/profile-oauth?code=${codeResponse.code}`
+        );
+        setLoggedIn(true);
+      } catch (err) {
+        console.error("Error calling profile oauth", err);
+      }
+    },
+    onError: (error) => console.error("Login Failed:", error),
+    flow: "auth-code",
+  });
 
   const loginClicked = () => {
     login();
-  }
+  };
 
   const logoutClicked = () => {
     googleLogout();
     setLoggedIn(false);
-  }
+  };
 
   const controller = {
-    addText: message => {
+    addText: (message) => {
       setTexts([...texts, message]);
     },
     texts,
     setTexts,
-
-  }
-  
+  };
 
   return (
-      <div className="App">
-        {!loggedIn ? (
-          <button onClick={loginClicked}>Login</button>
-        ) : (
-          <>
-            <Texts controller={controller}/>
-            <MessageSender controller={controller}/>
-            <button onClick={logoutClicked}>Signout</button>
-          </>
-        )}
-      </div>
+    <div className="App">
+      {!loggedIn ? (
+        <div className="page-container">
+          <div className="header-container">
+            <img id="mainLogo" src={appLogo} alt="App Logo" />
+            <div className="header-text">
+              <h1>Multichat</h1>
+              <br />
+              <button id="googleLoginButton" onClick={loginClicked}>
+                Login with Google
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <Texts controller={controller} />
+          <MessageSender controller={controller} />
+          <button onClick={logoutClicked}>Signout</button>
+        </>
+      )}
+    </div>
   );
 }
 

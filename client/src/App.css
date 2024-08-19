@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.page-container {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+  text-align: center; /* Center text inside flex items, useful for centering h1 */
+  margin: auto;
+}
+
+
+.header-container {
+  display: flex; 
+  align-items: center; 
+}
+
+#mainLogo {
+  width: 200%; 
+  height: auto; 
+  margin-right: 20px;
+}
+
+/* Container for h1 and button */
+.header-text {
+  display: flex;
+  flex-direction: column; /* Stack h1 and button vertically */
+  justify-content: center; /* Center the items vertically */
+}
+
+/* Optional: Additional styling for the button */
+#googleLoginButton {
+  margin-top: 10px; /* Space between h1 and button */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#googleLoginButton:hover {
+  background-color: #357AE8; /* Darker Google Blue */
+}
+
+#googleLoginButton:focus {
+  outline: none;
+}
