@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { getWebSocket } from 'util/WebSocket';
+import "./MessageSender.css"
 
 const MessageSender = ({controller}) => {
     const [message, setMessage] = useState('');
@@ -18,8 +19,7 @@ const MessageSender = ({controller}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="message">Message:</label><br />
-            <input type="text" name="message" value={message} onChange={handleChange}></input><br />
+            <input type="text" name="message" placeholder="Message..." value={message} onChange={handleChange}></input><br />
             <input type="submit" disabled={message.length == 0}></input>
         </form>
     )

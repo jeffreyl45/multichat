@@ -7,31 +7,44 @@
 }
 
 .Texts {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 50%
+    
+}
+
+.otherText {
     list-style-type: none;
     background-color: skyblue;
-    padding: 30px;
-    border-radius: 40%;
-    float: bottom;
-    margin-left: 85%;
+    border-radius: 40px;
     margin-bottom: 10px;
-    width: 50%;
+    width: min-content;
     word-wrap: break-word;
     text-align: left;
+    position: relative;
+    padding: 30px;
+    display: flex;
 }
 
 .pfp {
     height: 30px;
+    border-radius: 50%;
+    float: left;
 }
 
 .ownText {
     list-style-type: none;
     background-color: grey;
     padding: 30px;
-    border-radius: 40%;
+    border-radius: 40px;
     float: right;
-    margin-right: 15%;
+    margin-left: -60%;
     margin-bottom: 10px;
-    width: 50%;
+    width: min-content;
+    max-width: 50%;
     word-wrap: break-word;
-    text-align: right;
+    text-align: left;
+    position: relative;
 }
+
