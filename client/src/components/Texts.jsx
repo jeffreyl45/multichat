@@ -25,7 +25,7 @@ const Texts = ({controller}) => {
                   src={data.pfp}
                   alt="user's profile picture"
                 ></img>
-                <paragraph className="otherText">{data.message}</paragraph>
+                <p className="otherText">{data.message}</p>
               </div>
             </li> :
             <li key={index} className="ownText">
