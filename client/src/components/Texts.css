@@ -48,6 +48,7 @@
     width: fit-content;
     max-width: 250px;
     word-wrap: break-word;
+    align-self: flex-end;
 }
 
 .otherUserText {
