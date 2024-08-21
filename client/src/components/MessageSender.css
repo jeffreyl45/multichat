@@ -1,3 +1,7 @@
 form input, form textarea {
     border-radius: 40px;
 }
+
+#submitButtonIcon {
+    margin-left: 5px;
+}

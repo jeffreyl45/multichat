@@ -20,7 +20,7 @@ const MessageSender = ({controller}) => {
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" name="message" placeholder="Message..." value={message} onChange={handleChange}></input>
-            <input type="submit" disabled={message.length == 0} value="➢"></input>
+            <input id="submitButtonIcon" type="submit" disabled={message.length == 0} value="➢"></input>
         </form>
     )
 
