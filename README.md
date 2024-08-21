@@ -1,6 +1,6 @@
-# multichat
+# Multichat
 
-Multi User Chat
+A Multi User Chat Application
 
 # Setup for Backend:
 
