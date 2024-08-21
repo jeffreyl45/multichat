@@ -6,9 +6,10 @@ A Multi User Chat Application
 
 1. Setup virtual environment for python: python -m venv server/venvs
 2. Activate virtual environment: source server/venv/bin/activate
-3. Install all requirements in requirements.txt using pip install -r requirements.txt
-4. Run the server from the server directory using: python server.py
-5. Test using curl --header "Content-Type: application/json" --request POST --data '{"message":"hello!"}' http://127.0.0.1:5000/sendMessage
+3. Go into the 'server' directory
+4. Install all requirements in requirements.txt using pip install -r requirements.txt
+5. Run the server from the server directory using: python server.py
+6. Test using curl --header "Content-Type: application/json" --request POST --data '{"message":"hello!"}' http://127.0.0.1:5000/sendMessage
 
 # Setup for Frontend:
 
