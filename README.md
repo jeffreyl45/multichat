@@ -15,7 +15,7 @@ Multi User Chat
 
 1. Create react app from multichat directory using npx create-react-app client
 2. Run the client server with npm run start
-3. Create .env secrets file with app configurations secret key for session management (can be anything of your choice). Include the following:
+3. Create .env secrets file with app configurations secret key (can be anything of your choice) for session management. Also include the following items for setup:
 <ul>
     <li><a href ="https://blog.logrocket.com/guide-adding-google-login-react-app/">client id from Google Cloud console</a></li>
     <li><a href ="https://www.balbooa.com/help/gridbox-documentation/integrations/other/google-client-id">client secret from Google Cloud console</a></li>
