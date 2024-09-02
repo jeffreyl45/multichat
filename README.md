@@ -2,6 +2,15 @@
 
 A Multi User Chat Application
 
+# Purpose of this Project:
+I built this project to learn about full stack development, particularly how to connect the front end with the back end
+
+# What this Project Does:
+This project allows two separate users to send messages to each other through a server. The rendering of the messages to each user is different and is dependent on whether or not the message was from another user or sent by the current user (i.e. like you would expect from any social media direct message feature)
+
+# Next Steps:
+Allow users to see messages sent to them prior to logging in using a database system
+
 # Setup for Backend:
 
 1. Setup virtual environment for python: python -m venv server/venvs
@@ -21,3 +30,5 @@ A Multi User Chat Application
     <li><a href ="https://www.balbooa.com/help/gridbox-documentation/integrations/other/google-client-id">client secret from Google Cloud console</a></li>
     <li><a href="https://blog.logrocket.com/guide-adding-google-login-react-app/">redirect url</a></li>
 </ul>
+
+
