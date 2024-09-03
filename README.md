@@ -3,10 +3,10 @@
 A Multi User Chat Application
 
 # Purpose of this Project:
-I built this project to learn about full stack development, particularly how to connect the front end with the back end
+I built this project to learn about full stack development, particularly how to connect the front end with the back end and also how to use new tools such as flask for setting up the python back end server and websocket to post data between the front end and back end.
 
 # What this Project Does:
-This project allows two separate users to send messages to each other through a server. The rendering of the messages to each user is different and is dependent on whether or not the message was from another user or sent by the current user (i.e. like you would expect from any social media direct message feature)
+This project allows multiple separate users to send messages to each other through a server. The rendering of the messages to each user is different and is dependent on whether or not the message was from another user or sent by the current user (i.e. like you would expect from any social media direct message feature)
 
 # Next Steps:
 Allow users to see messages sent to them prior to logging in using a database system
