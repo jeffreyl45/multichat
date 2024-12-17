@@ -17,6 +17,7 @@ const Texts = ({controller}) => {
       <br />
       <ul className="text-container">
         {controller.texts.map((data, index) => {
+          // if data.pfp is null then the user information was NOT broadcasted which means it was the user who sent the message
           return (data.pfp != null ? 
             <li key={index} className="Texts">
               <div className="otherUserText">

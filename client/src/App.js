@@ -63,7 +63,7 @@ function App() {
             </div>
           </div>
         </div>
-      ) : (
+      ) : ( //logged in code
         <>
           <Texts controller={controller} />
           <MessageSender controller={controller} />
