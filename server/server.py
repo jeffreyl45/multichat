@@ -86,7 +86,7 @@ def get_profile():
 
 
 if __name__ == "__main__":
-    # export ENV_MODE=cloud or export ENV_MODE=local depending where the server is being run
+    # export ENV_MODE=cloud for MacOS/Linux if running on cloud
     env_mode = os.getenv("ENV_MODE", "local").lower()  # Default to 'local' if not set
 
     if env_mode == "cloud":
