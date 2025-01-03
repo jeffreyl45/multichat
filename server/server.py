@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, session
 from flask_socketio import SocketIO
 from google.oauth2.credentials import Credentials
@@ -85,4 +86,10 @@ def get_profile():
 
 
 if __name__ == "__main__":
-    socketio.run(app, host="0.0.0.0", port=5000)
+    # export ENV_MODE=cloud or export ENV_MODE=local depending where the server is being run
+    env_mode = os.getenv("ENV_MODE", "local").lower()  # Default to 'local' if not set
+
+    if env_mode == "cloud":
+        socketio.run(app, host="0.0.0.0", port=5000)
+    else:
+        socketio.run(app)
