@@ -17,8 +17,8 @@ Allow users to see messages sent to them prior to logging in using a database sy
 2. Activate virtual environment: source server/venv/bin/activate
 3. Go into the 'server' directory
 4. Install all requirements in requirements.txt using pip install -r requirements.txt
-5. If running on cloud then do ``export ENV_MODE=cloud`` on Linux
-6. Run the server from the server directory using: python server.py
+5. If running on cloud then do ``export ENV_MODE=cloud`` on Linux. By default the environment variable is set to local.
+6. Run the server from the server directory using: ``python server.py``
 7. Test using curl --header "Content-Type: application/json" --request POST --data '{"message":"hello!"}' http://127.0.0.1:5000/sendMessage
 
 # Setup for Frontend:
